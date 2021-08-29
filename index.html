@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Tailwind CSS -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<!-- Bootstrap icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+	<link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<title>Get Anime Quote</title>
+</head>
+
+<body class="flex flex-col justify-between h-screen">
+
+	<!-- ========== HEADER ========== -->
+	<header
+		class="flex flex-col items-stretch bg-gradient-to-r from-blue-400 to-purple-500 border-purple-500 border-b-2 w-full">
+		<div class="mx-auto py-5">
+			<h1 class="text-3xl text-center font-mono text-white md:text-5xl lg:text-6xl">Get Anime Quote <i
+					class="bi bi-chat-left-quote"></i></h1>
+		</div>
+
+		<!-- === NAVBAR === -->
+		<nav id="top-navbar" class="hidden md:inline">
+			<ul class="md:flex md:justify-center md:items-center">
+				<li class="block"><button id="random-quote-btn"
+						class="w-full bg-transparent text-white p-2 md:w-auto hover:bg-purple-300 hover:bg-opacity-20">A random
+						quote</button></li>
+				<li><button id="random-quotes-btn"
+						class="w-full bg-transparent text-white p-2 md:w-auto hover:bg-purple-300 hover:bg-opacity-20">Random
+						quotes</button></li>
+				<li><button id="quotes-by-anime-title"
+						class="w-full bg-transparent text-white p-2 md:w-auto hover:bg-purple-300 hover:bg-opacity-20">Quote by
+						anime title</button></li>
+				<li><button id="quotes-by-character-name"
+						class="w-full bg-transparent text-white p-2 md:w-auto hover:bg-purple-300 hover:bg-opacity-20">Quote by
+						character name</button></li>
+			</ul>
+		</nav>
+		<!-- === NAVBAR === -->
+
+		<div id="input-form" class="hidden flex justify-center bg-purple-300 bg-opacity-50 py-4">
+			<input id="input" type="text"
+				class="border border-transparent rounded-lg w-60 h-4 p-4 mr-2 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+			<button id="get-btn"
+				class="text-white bg-purple-500 rounded-lg w-16 hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">Get</button>
+		</div>
+
+		<button id="toggle-hide-navbar" class="text-white w-full h-10 md:hidden hover:bg-purple-300 hover:bg-opacity-20">
+			<i id="up-icon" class="bi bi-chevron-compact-up hidden"></i>
+			<i id="down-icon" class="bi bi-chevron-compact-down"></i>
+		</button>
+	</header>
+	<!-- ========== HEADER ========== -->
+
+
+
+	<!-- ========== MAIN ========== -->
+	<main class="flex-grow flex flex-col justify-center items-center pt-6 mx-auto">
+
+		<!-- Loading GIF -->
+		<img id="loading-img" class="hidden block m-auto" width="200px" src="assets/gif/cat-confused.gif">
+
+		<!-- Card quotes -->
+		<section id="quotes-section" class="container flex flex-col justify-center items-center mx-auto">
+
+		</section>
+
+		<!-- Navigation buttons -->
+		<section id="nav-buttons" class="mb-6">
+
+			<button id="get-new-random-btn"
+				class="text-white bg-blue-500 rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">New
+				quote</button>
+
+			<button id="get-new-randoms-btn"
+				class="text-white bg-blue-500 rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">New
+				quotes</button>
+
+			<div id="prev-next">
+				<button id="prev-btn"
+					class="text-white bg-blue-500 rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"><i
+						class="bi bi-arrow-left"></i> Prev</button>
+
+				<button id="next-btn"
+					class="text-white bg-blue-500 rounded-lg py-2 px-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Next
+					<i class="bi bi-arrow-right"></i></button>
+			</div>
+
+		</section>
+
+	</main>
+	<!-- ========== MAIN ========== -->
+
+
+
+	<!-- ========== FOOTER ========== -->
+	<footer class="bg-gradient-to-r from-blue-400 to-purple-500 border-purple-500 border-t-2 mt-auto">
+		<div
+			class="container flex flex-col items-center mx-auto text-gray-50 text-center py-3 md:flex-row-reverse md: justify-between">
+			<div class="mb-4 md:mr-4 md:mb-0">
+				<a href="https://github.com/adiiaryasutaa/getanimequote"><i class="bi bi-github text-3xl"></i></a>
+			</div>
+			<div class="text-sm md:text-lg md:ml-4">
+				Copyright © 2021 Adi Aryasuta | Made with <i class="bi bi-heart-fill text-red-500"></i> using <a
+					class="hover:underline" href="https://tailwindcss.com/">Tailwind</a> and <a class="hover:underline"
+					href="https://icons.getbootstrap.com/">Bootstrap Icons</a>
+			</div>
+		</div>
+	</footer>
+	<!-- ========== FOOTER ========== -->
+
+
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/fetch.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

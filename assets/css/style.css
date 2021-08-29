@@ -1,0 +1,56 @@
+
+
+div.card {
+  width: 50rem;
+  min-height: 6rem;
+}
+
+div.card div.card-header {
+  min-height: 1.5rem;
+}
+
+button.disabled {
+  pointer-events: none;
+}
+
+div#prev-next button.disabled {
+  background-color: rgba(75, 85, 99, 1);
+}
+
+
+
+
+@media screen and (max-width: 845px) {
+  div.card {
+    width: 36rem;
+    min-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 628px) {
+  div.card {
+    width: 28rem;
+    min-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  div.card {
+    width: 20rem;
+    min-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  div.card {
+    width: 18.5rem;
+    min-height: 6rem;
+  }
+}
+
+@media screen and (max-width: 312px) {
+  div.card {
+    width: 16rem;
+    min-height: 6rem;
+  }
+}
